@@ -15,9 +15,9 @@ namespace DOANPTTK
         {
             dalTaiKhoan = new DAL_TaiKhoan();
         }
-        public DataTable DocThongTinTaiKhoan()
+        public DataTable DocThongTinTaiKhoan(DTO_TaiKhoan taiKhoan)
         {
-            return dalTaiKhoan.DocThongTinTaiKhoan();
+            return dalTaiKhoan.DocThongTinTaiKhoan(taiKhoan);
         }
 
     }

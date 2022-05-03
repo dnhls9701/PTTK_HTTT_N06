@@ -41,3 +41,23 @@ C:\Users\Huong Lan\source\repos\N06_PTTK\DOANPTTK\obj\Debug\DOANPTTK.csproj.Gene
 C:\Users\Huong Lan\source\repos\N06_PTTK\DOANPTTK\obj\Debug\DOANPTTK.csproj.CoreCompileInputs.cache
 C:\Users\Huong Lan\source\repos\N06_PTTK\DOANPTTK\obj\Debug\DOANPTTK.exe
 C:\Users\Huong Lan\source\repos\N06_PTTK\DOANPTTK\obj\Debug\DOANPTTK.pdb
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\bin\Debug\DOANPTTK.exe.config
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\bin\Debug\DOANPTTK.exe
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\bin\Debug\DOANPTTK.pdb
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.csproj.AssemblyReference.cache
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.frmDangKyTiemChung.resources
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.frmDangKy.resources
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.frmDangNhap.resources
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.frmLapHoaDon.resources
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.Properties.Resources.resources
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.frmOptionsBS.resources
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.frmOptionsBPDH.resources
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.frmOptionsCustom.resources
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.frmOptionsNVHD.resources
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.frmOptionsNVKT.resources
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.frmOptionsNVYT.resources
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.frmDSHoaDon.resources
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.csproj.GenerateResource.cache
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.csproj.CoreCompileInputs.cache
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.exe
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.pdb

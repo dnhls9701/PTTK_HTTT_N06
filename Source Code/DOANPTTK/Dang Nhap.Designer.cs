@@ -30,6 +30,7 @@ namespace DOANPTTK
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDangKy = new System.Windows.Forms.Button();
             this.btnDangNhap = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@ namespace DOANPTTK
             this.label3 = new System.Windows.Forms.Label();
             this.txtTenTaiKhoan = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnThoat = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +52,18 @@ namespace DOANPTTK
             this.label1.TabIndex = 0;
             this.label1.Text = "Đăng Nhập";
             // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnThoat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnThoat.Location = new System.Drawing.Point(272, 342);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(102, 33);
+            this.btnThoat.TabIndex = 7;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -61,21 +73,20 @@ namespace DOANPTTK
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtTenTaiKhoan);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(66, 115);
+            this.panel1.Location = new System.Drawing.Point(74, 103);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(507, 204);
-            this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.TabIndex = 8;
             // 
             // btnDangKy
             // 
-            this.btnDangKy.Location = new System.Drawing.Point(128, 138);
+            this.btnDangKy.Location = new System.Drawing.Point(134, 138);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(102, 33);
-            this.btnDangKy.TabIndex = 6;
+            this.btnDangKy.TabIndex = 7;
             this.btnDangKy.Text = "Đăng ký";
             this.btnDangKy.UseVisualStyleBackColor = true;
-            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click_1);
             // 
             // btnDangNhap
             // 
@@ -85,7 +96,7 @@ namespace DOANPTTK
             this.btnDangNhap.TabIndex = 2;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click_1);
             // 
             // txtMatKhau
             // 
@@ -123,28 +134,18 @@ namespace DOANPTTK
             this.label2.TabIndex = 2;
             this.label2.Text = "Tên tài khoản:";
             // 
-            // btnThoat
-            // 
-            this.btnThoat.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnThoat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnThoat.Location = new System.Drawing.Point(272, 342);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(102, 33);
-            this.btnThoat.TabIndex = 7;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = false;
-            // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(655, 411);
-            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.label1);
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dang_Nhap";
+            this.Text = "Đăng nhập";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDangNhap_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -155,13 +156,13 @@ namespace DOANPTTK
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnDangKy;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTenTaiKhoan;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnDangKy;
     }
 }

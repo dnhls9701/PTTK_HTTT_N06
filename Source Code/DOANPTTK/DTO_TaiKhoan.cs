@@ -8,7 +8,7 @@ namespace DOANPTTK
 {
     class DTO_TaiKhoan
     {
-        public string TenDangNhap { set; get; }
+        public string TenTaiKhoan { set; get; }
         public string MatKhau { set; get; }
         public int LoaiND { set; get; }
     }

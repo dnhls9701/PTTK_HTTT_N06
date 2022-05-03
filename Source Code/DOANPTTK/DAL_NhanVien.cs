@@ -8,22 +8,21 @@ using System.Data.SqlClient;
 
 namespace DOANPTTK
 {
-    class DAL_TaiKhoan
+    class DAL_NhanVien
     {
         DataConnection dc;
-        public DAL_TaiKhoan()
+        public DAL_NhanVien()
         {
             dc = new DataConnection();
 
         }
-        public DataTable DocThongTinTaiKhoan(DTO_TaiKhoan taiKhoan)
+        public DataTable DocThongTinNhanVien(DTO_NhanVien nhanVien)
         {
             try
             {
                 SqlConnection con = dc.getConnect();
-                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM TAIKHOAN WHERE TENTAIKHOAN = @TenTaiKhoan", con);
-                da.SelectCommand.Parameters.Add("@TenTaiKhoan", SqlDbType.VarChar).Value = taiKhoan.TenTaiKhoan;
-                //da.SelectCommand.Parameters.AddWithValue("@TenTaiKhoan", "%" + txt + "%");
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM NHANVIEN WHERE MANHANVIEN = @MaNhanVien", con);
+                da.SelectCommand.Parameters.Add("@MaNhanVien", SqlDbType.VarChar).Value = nhanVien.MaNhanVien;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 return dt;
@@ -32,7 +31,6 @@ namespace DOANPTTK
             {
                 return null;
             }
-            
         }
     }
 }

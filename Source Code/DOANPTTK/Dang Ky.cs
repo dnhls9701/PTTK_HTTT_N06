@@ -37,7 +37,8 @@ namespace DOANPTTK
                     this.Hide();
                 }
             }
-            catch { 
+            catch {
+                con.Open();
                 MessageBox.Show("Đăng ký không thành công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtTenTaiKhoan.Clear();
                 txtMatKhau.Clear();
