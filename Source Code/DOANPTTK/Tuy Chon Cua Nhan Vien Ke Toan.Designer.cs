@@ -33,6 +33,7 @@ namespace DOANPTTK
             this.btnDatMuaVacXin = new System.Windows.Forms.Button();
             this.btnDangKyTiemChung = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSignOut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnXemThongTin
@@ -77,16 +78,30 @@ namespace DOANPTTK
             this.label1.TabIndex = 25;
             this.label1.Text = "Tùy Chọn Chức Năng";
             // 
+            // btnSignOut
+            // 
+            this.btnSignOut.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnSignOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSignOut.Location = new System.Drawing.Point(685, 23);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(92, 36);
+            this.btnSignOut.TabIndex = 29;
+            this.btnSignOut.Text = "Đăng xuất";
+            this.btnSignOut.UseVisualStyleBackColor = false;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            // 
             // frmOptionsNVKT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.btnXemThongTin);
             this.Controls.Add(this.btnDatMuaVacXin);
             this.Controls.Add(this.btnDangKyTiemChung);
             this.Controls.Add(this.label1);
             this.Name = "frmOptionsNVKT";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tùy chọn của nhân viên kế toán";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -99,5 +114,6 @@ namespace DOANPTTK
         private System.Windows.Forms.Button btnDatMuaVacXin;
         private System.Windows.Forms.Button btnDangKyTiemChung;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSignOut;
     }
 }

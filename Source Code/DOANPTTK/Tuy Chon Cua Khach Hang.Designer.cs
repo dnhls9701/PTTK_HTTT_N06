@@ -35,6 +35,7 @@ namespace DOANPTTK
             this.btnSuaPhieu = new System.Windows.Forms.Button();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.btnXemThongTin = new System.Windows.Forms.Button();
+            this.btnSignOut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -100,11 +101,24 @@ namespace DOANPTTK
             this.btnXemThongTin.Text = "Thông tin tài khoản";
             this.btnXemThongTin.UseVisualStyleBackColor = false;
             // 
+            // btnSignOut
+            // 
+            this.btnSignOut.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnSignOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSignOut.Location = new System.Drawing.Point(683, 20);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(92, 36);
+            this.btnSignOut.TabIndex = 26;
+            this.btnSignOut.Text = "Đăng xuất";
+            this.btnSignOut.UseVisualStyleBackColor = false;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            // 
             // frmOptionsCustom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.btnXemThongTin);
             this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.btnSuaPhieu);
@@ -127,5 +141,6 @@ namespace DOANPTTK
         private System.Windows.Forms.Button btnSuaPhieu;
         private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.Button btnXemThongTin;
+        private System.Windows.Forms.Button btnSignOut;
     }
 }
