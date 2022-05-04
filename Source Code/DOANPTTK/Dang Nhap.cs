@@ -67,11 +67,12 @@ namespace DOANPTTK
                 {
                     case 0:
                         {
-                            frmOptionsCustom frmOptions = new frmOptionsCustom();
+                            frmOptionsCustom frmOptions = new frmOptionsCustom(this);
                             this.Hide();
                             frmOptions.ShowDialog();
                             this.Show();
                             break;
+                            //frmOptions
                         }
                     case 1:
                         {
@@ -88,7 +89,7 @@ namespace DOANPTTK
                                 {
                                     case 0:
                                         {
-                                            frmOptionsNVHD frmOptionsNVHD = new frmOptionsNVHD();
+                                            frmOptionsNVHD frmOptionsNVHD = new frmOptionsNVHD(this);
                                             this.Hide();
                                             frmOptionsNVHD.ShowDialog();
                                             this.Show();
@@ -96,7 +97,8 @@ namespace DOANPTTK
                                         }
                                     case 1:
                                         {
-                                            frmOptionsNVYT frmOptionsNVYT = new frmOptionsNVYT();
+                                            //
+                                            frmOptionsNVYT frmOptionsNVYT = new frmOptionsNVYT(this);
                                             this.Hide();
                                             frmOptionsNVYT.ShowDialog();
                                             this.Show();
@@ -104,7 +106,7 @@ namespace DOANPTTK
                                         }
                                     case 2:
                                         {
-                                            frmOptionsBS frmOptionsBS = new frmOptionsBS();
+                                            frmOptionsBS frmOptionsBS = new frmOptionsBS(this);
                                             this.Hide();
                                             frmOptionsBS.ShowDialog();
                                             this.Show();
@@ -112,7 +114,7 @@ namespace DOANPTTK
                                         }
                                     case 3:
                                         {
-                                            frmOptionsNVKT frmOptionsNVKT = new frmOptionsNVKT();
+                                            frmOptionsNVKT frmOptionsNVKT = new frmOptionsNVKT(this);
                                             this.Hide();
                                             frmOptionsNVKT.ShowDialog();
                                             this.Show();
@@ -124,7 +126,7 @@ namespace DOANPTTK
                         }
                     case 2:
                         {
-                            frmOptionsBPDH frmOptionsBPDH = new frmOptionsBPDH();
+                            frmOptionsBPDH frmOptionsBPDH = new frmOptionsBPDH(this);
                             this.Hide();
                             frmOptionsBPDH.ShowDialog();
                             this.Show();
@@ -136,6 +138,7 @@ namespace DOANPTTK
             {
                 MessageBox.Show("Tên tài khoản không chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+           
         }
     }
 }

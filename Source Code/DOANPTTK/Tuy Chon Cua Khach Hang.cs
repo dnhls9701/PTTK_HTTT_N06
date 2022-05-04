@@ -12,8 +12,10 @@ namespace DOANPTTK
 {
     public partial class frmOptionsCustom : Form
     {
-        public frmOptionsCustom()
+        frmDangNhap cur_frmDangNhap;
+        public frmOptionsCustom(frmDangNhap frmDangNhap)
         {
+            cur_frmDangNhap = frmDangNhap;
             InitializeComponent();
         }
 
@@ -22,6 +24,20 @@ namespace DOANPTTK
             frmDangKyTiemChung frmDangKyTiemChung = new frmDangKyTiemChung();
             frmDangKyTiemChung.Show();
             this.Hide();
+        }
+
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất tài khoản?", "Xác nhận", MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+                cur_frmDangNhap.Show();
+            }
+            else if (result == DialogResult.No)
+            {
+                //..
+            }
         }
     }
 }
