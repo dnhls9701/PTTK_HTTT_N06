@@ -15,9 +15,9 @@ namespace DOANPTTK
         {
             dalHoaDon = new DAL_HoaDon();
         }
-        public DataTable LayThongTinHoaDon()
+        public DataTable LayThongTinHoaDon(DTO_HoaDon hoaDon)
         {
-            return dalHoaDon.LayThongTinHoaDon();
+            return dalHoaDon.LayThongTinHoaDon(hoaDon);
         }
         public bool TaoHoaDon (DTO_HoaDon hoaDon)
         {

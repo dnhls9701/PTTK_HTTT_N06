@@ -18,10 +18,12 @@ namespace DOANPTTK
         public frmDangNhap()
         {
             InitializeComponent();
+       
             BUS_taiKhoan = new BUS_TaiKhoan();
             BUS_nhanVien = new BUS_NhanVien();
+ 
         }
-        //SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-1ETUQ04I\SQLEXPRESS;Initial Catalog=QLTC;Persist Security Info=True;User ID=sa;Password=12345");
+  
         private void btnThoat_Click(object sender, EventArgs e)
         {
             DialogResult res;
@@ -49,30 +51,28 @@ namespace DOANPTTK
             frmDangKy frmDangKy = new frmDangKy();
             this.Hide();
             frmDangKy.ShowDialog();
-            //this.Show();
         }
 
         private void btnDangNhap_Click_1(object sender, EventArgs e)
         {
             DTO_TaiKhoan tk = new DTO_TaiKhoan();
             tk.TenTaiKhoan = txtTenTaiKhoan.Text;
+            tk.MatKhau = txtMatKhau.Text;
             DataTable dt = BUS_taiKhoan.DocThongTinTaiKhoan(tk);
             if (dt.Rows.Count > 0)
             {
                 DataRow row = dt.Rows[0];
-                //string tenTaiKhoan = row["TENTAIKHOAN"].ToString();
                 string loaiND = row["LOAIND"].ToString();
                 int type = int.Parse(loaiND);
                 switch (type)
                 {
                     case 0:
                         {
-                            frmOptionsCustom frmOptions = new frmOptionsCustom(this);
+                            frmOptionsCustom frmOptions = new frmOptionsCustom(txtTenTaiKhoan.Text);
                             this.Hide();
                             frmOptions.ShowDialog();
                             this.Show();
                             break;
-                            //frmOptions
                         }
                     case 1:
                         {
@@ -82,14 +82,13 @@ namespace DOANPTTK
                             if (dtNV.Rows.Count > 0)
                             {
                                 DataRow rowNV = dtNV.Rows[0];
-                                //string nhanVien = row["MANHANVIEN"].ToString();
                                 string viTri = rowNV["VITRI"].ToString();
                                 int typeViTri = int.Parse(viTri);
                                 switch (typeViTri)
                                 {
                                     case 0:
                                         {
-                                            frmOptionsNVHD frmOptionsNVHD = new frmOptionsNVHD(this);
+                                            frmOptionsNVHD frmOptionsNVHD = new frmOptionsNVHD();
                                             this.Hide();
                                             frmOptionsNVHD.ShowDialog();
                                             this.Show();
@@ -98,7 +97,7 @@ namespace DOANPTTK
                                     case 1:
                                         {
                                             //
-                                            frmOptionsNVYT frmOptionsNVYT = new frmOptionsNVYT(this);
+                                            frmOptionsNVYT frmOptionsNVYT = new frmOptionsNVYT();
                                             this.Hide();
                                             frmOptionsNVYT.ShowDialog();
                                             this.Show();
@@ -106,7 +105,7 @@ namespace DOANPTTK
                                         }
                                     case 2:
                                         {
-                                            frmOptionsBS frmOptionsBS = new frmOptionsBS(this);
+                                            frmOptionsBS frmOptionsBS = new frmOptionsBS();
                                             this.Hide();
                                             frmOptionsBS.ShowDialog();
                                             this.Show();
@@ -114,7 +113,7 @@ namespace DOANPTTK
                                         }
                                     case 3:
                                         {
-                                            frmOptionsNVKT frmOptionsNVKT = new frmOptionsNVKT(this);
+                                            frmOptionsNVKT frmOptionsNVKT = new frmOptionsNVKT(txtTenTaiKhoan.Text);
                                             this.Hide();
                                             frmOptionsNVKT.ShowDialog();
                                             this.Show();
@@ -126,7 +125,7 @@ namespace DOANPTTK
                         }
                     case 2:
                         {
-                            frmOptionsBPDH frmOptionsBPDH = new frmOptionsBPDH(this);
+                            frmOptionsBPDH frmOptionsBPDH = new frmOptionsBPDH();
                             this.Hide();
                             frmOptionsBPDH.ShowDialog();
                             this.Show();
@@ -136,7 +135,7 @@ namespace DOANPTTK
             }
             else
             {
-                MessageBox.Show("Tên tài khoản không chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Tên tài khoản hoặc mật khẩu không chính xác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
            
         }

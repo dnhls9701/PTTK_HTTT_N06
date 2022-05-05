@@ -46,12 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS_ChiTietDK.cs" />
+    <Compile Include="BUS_GoiTiem.cs" />
     <Compile Include="BUS_HoaDon.cs" />
     <Compile Include="BUS_NhanVien.cs" />
+    <Compile Include="BUS_PhieuDangKy.cs" />
     <Compile Include="BUS_TaiKhoan.cs" />
+    <Compile Include="BUS_Vacxin.cs" />
+    <Compile Include="DAL_ChiTietDK.cs" />
+    <Compile Include="DAL_GoiTiem.cs" />
     <Compile Include="DAL_HoaDon.cs" />
     <Compile Include="DAL_NhanVien.cs" />
+    <Compile Include="DAL_PhieuDangKy.cs" />
     <Compile Include="DAL_TaiKhoan.cs" />
+    <Compile Include="DAL_Vacxin.cs" />
     <Compile Include="Dang Ky Tiem Chung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,9 +79,25 @@
       <DependentUpon>Dang Nhap.cs</DependentUpon>
     </Compile>
     <Compile Include="DataConnection.cs" />
+    <Compile Include="DKTC_DanhSachGoiTiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DKTC_DanhSachGoiTiem.Designer.cs">
+      <DependentUpon>DKTC_DanhSachGoiTiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DKTC_DanhSachVacxin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DKTC_DanhSachVacxin.Designer.cs">
+      <DependentUpon>DKTC_DanhSachVacxin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO_ChiTietDK.cs" />
+    <Compile Include="DTO_GoiTiem.cs" />
     <Compile Include="DTO_HoaDon.cs" />
     <Compile Include="DTO_NhanVien.cs" />
+    <Compile Include="DTO_PhieuDangKy.cs" />
     <Compile Include="DTO_TaiKhoan.cs" />
+    <Compile Include="DTO_Vacxin.cs" />
     <Compile Include="LapHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +156,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dang Nhap.resx">
       <DependentUpon>Dang Nhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DKTC_DanhSachGoiTiem.resx">
+      <DependentUpon>DKTC_DanhSachGoiTiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DKTC_DanhSachVacxin.resx">
+      <DependentUpon>DKTC_DanhSachVacxin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LapHoaDon.resx">
       <DependentUpon>LapHoaDon.cs</DependentUpon>

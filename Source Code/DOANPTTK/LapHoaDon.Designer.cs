@@ -31,7 +31,7 @@ namespace DOANPTTK
         {
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtMaTT = new System.Windows.Forms.TextBox();
+            this.dtpNgayThanhToan = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cbHinhthucTT = new System.Windows.Forms.ComboBox();
@@ -49,7 +49,7 @@ namespace DOANPTTK
             this.label1 = new System.Windows.Forms.Label();
             this.btnTao = new System.Windows.Forms.Button();
             this.btnXemdanhsach = new System.Windows.Forms.Button();
-            this.dtpNgayThanhToan = new System.Windows.Forms.DateTimePicker();
+            this.cbMaTT = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,8 +67,8 @@ namespace DOANPTTK
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cbMaTT);
             this.panel1.Controls.Add(this.dtpNgayThanhToan);
-            this.panel1.Controls.Add(this.txtMaTT);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.cbHinhthucTT);
@@ -85,15 +85,15 @@ namespace DOANPTTK
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(39, 135);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(877, 337);
+            this.panel1.Size = new System.Drawing.Size(877, 275);
             this.panel1.TabIndex = 9;
             // 
-            // txtMaTT
+            // dtpNgayThanhToan
             // 
-            this.txtMaTT.Location = new System.Drawing.Point(205, 123);
-            this.txtMaTT.Name = "txtMaTT";
-            this.txtMaTT.Size = new System.Drawing.Size(187, 22);
-            this.txtMaTT.TabIndex = 23;
+            this.dtpNgayThanhToan.Location = new System.Drawing.Point(603, 35);
+            this.dtpNgayThanhToan.Name = "dtpNgayThanhToan";
+            this.dtpNgayThanhToan.Size = new System.Drawing.Size(216, 22);
+            this.dtpNgayThanhToan.TabIndex = 25;
             // 
             // label8
             // 
@@ -140,10 +140,10 @@ namespace DOANPTTK
             // 
             // txtNoidung
             // 
-            this.txtNoidung.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtNoidung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtNoidung.Location = new System.Drawing.Point(205, 211);
             this.txtNoidung.Name = "txtNoidung";
-            this.txtNoidung.Size = new System.Drawing.Size(614, 98);
+            this.txtNoidung.Size = new System.Drawing.Size(614, 24);
             this.txtNoidung.TabIndex = 13;
             // 
             // txtMaKH
@@ -228,7 +228,7 @@ namespace DOANPTTK
             // btnTao
             // 
             this.btnTao.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnTao.Location = new System.Drawing.Point(335, 502);
+            this.btnTao.Location = new System.Drawing.Point(347, 446);
             this.btnTao.Name = "btnTao";
             this.btnTao.Size = new System.Drawing.Size(109, 48);
             this.btnTao.TabIndex = 10;
@@ -239,7 +239,7 @@ namespace DOANPTTK
             // btnXemdanhsach
             // 
             this.btnXemdanhsach.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnXemdanhsach.Location = new System.Drawing.Point(499, 502);
+            this.btnXemdanhsach.Location = new System.Drawing.Point(511, 446);
             this.btnXemdanhsach.Name = "btnXemdanhsach";
             this.btnXemdanhsach.Size = new System.Drawing.Size(126, 48);
             this.btnXemdanhsach.TabIndex = 11;
@@ -247,24 +247,30 @@ namespace DOANPTTK
             this.btnXemdanhsach.UseVisualStyleBackColor = false;
             this.btnXemdanhsach.Click += new System.EventHandler(this.btnXemdanhsach_Click);
             // 
-            // dtpNgayThanhToan
+            // cbMaTT
             // 
-            this.dtpNgayThanhToan.Location = new System.Drawing.Point(603, 35);
-            this.dtpNgayThanhToan.Name = "dtpNgayThanhToan";
-            this.dtpNgayThanhToan.Size = new System.Drawing.Size(216, 22);
-            this.dtpNgayThanhToan.TabIndex = 25;
+            this.cbMaTT.FormattingEnabled = true;
+            this.cbMaTT.Items.AddRange(new object[] {
+            "TT001",
+            "TT002",
+            "TT003"});
+            this.cbMaTT.Location = new System.Drawing.Point(206, 123);
+            this.cbMaTT.Name = "cbMaTT";
+            this.cbMaTT.Size = new System.Drawing.Size(186, 24);
+            this.cbMaTT.TabIndex = 26;
             // 
             // frmLapHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 578);
+            this.ClientSize = new System.Drawing.Size(950, 526);
             this.Controls.Add(this.btnXemdanhsach);
             this.Controls.Add(this.btnTao);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Name = "frmLapHoaDon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lập hóa đơn thanh toán";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -290,10 +296,10 @@ namespace DOANPTTK
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbHinhthucTT;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtMaTT;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnTao;
         private System.Windows.Forms.Button btnXemdanhsach;
         private System.Windows.Forms.DateTimePicker dtpNgayThanhToan;
+        private System.Windows.Forms.ComboBox cbMaTT;
     }
 }

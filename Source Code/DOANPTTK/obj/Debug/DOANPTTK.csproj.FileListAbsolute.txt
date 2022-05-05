@@ -61,3 +61,5 @@ C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.
 C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.csproj.CoreCompileInputs.cache
 C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.exe
 C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.pdb
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.frmDSGoiTiem.resources
+C:\Users\Huong Lan\Videos\PTTK_HTTT_N06\Source Code\DOANPTTK\obj\Debug\DOANPTTK.frmDSMuiTiemVacxin.resources

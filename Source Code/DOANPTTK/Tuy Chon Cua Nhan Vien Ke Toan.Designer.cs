@@ -30,10 +30,10 @@ namespace DOANPTTK
         private void InitializeComponent()
         {
             this.btnXemThongTin = new System.Windows.Forms.Button();
-            this.btnDatMuaVacXin = new System.Windows.Forms.Button();
             this.btnDangKyTiemChung = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSignOut = new System.Windows.Forms.Button();
+            this.btnXuLyThanhToan = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnXemThongTin
@@ -45,16 +45,6 @@ namespace DOANPTTK
             this.btnXemThongTin.TabIndex = 28;
             this.btnXemThongTin.Text = "Thông tin tài khoản";
             this.btnXemThongTin.UseVisualStyleBackColor = false;
-            // 
-            // btnDatMuaVacXin
-            // 
-            this.btnDatMuaVacXin.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnDatMuaVacXin.Location = new System.Drawing.Point(426, 277);
-            this.btnDatMuaVacXin.Name = "btnDatMuaVacXin";
-            this.btnDatMuaVacXin.Size = new System.Drawing.Size(153, 51);
-            this.btnDatMuaVacXin.TabIndex = 27;
-            this.btnDatMuaVacXin.Text = "Xử lý thanh toán";
-            this.btnDatMuaVacXin.UseVisualStyleBackColor = false;
             // 
             // btnDangKyTiemChung
             // 
@@ -90,14 +80,25 @@ namespace DOANPTTK
             this.btnSignOut.UseVisualStyleBackColor = false;
             this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
+            // btnXuLyThanhToan
+            // 
+            this.btnXuLyThanhToan.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnXuLyThanhToan.Location = new System.Drawing.Point(426, 277);
+            this.btnXuLyThanhToan.Name = "btnXuLyThanhToan";
+            this.btnXuLyThanhToan.Size = new System.Drawing.Size(153, 51);
+            this.btnXuLyThanhToan.TabIndex = 30;
+            this.btnXuLyThanhToan.Text = "Xử lý thanh toán";
+            this.btnXuLyThanhToan.UseVisualStyleBackColor = false;
+            this.btnXuLyThanhToan.Click += new System.EventHandler(this.btnXuLyThanhToan_Click);
+            // 
             // frmOptionsNVKT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnXuLyThanhToan);
             this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.btnXemThongTin);
-            this.Controls.Add(this.btnDatMuaVacXin);
             this.Controls.Add(this.btnDangKyTiemChung);
             this.Controls.Add(this.label1);
             this.Name = "frmOptionsNVKT";
@@ -111,9 +112,9 @@ namespace DOANPTTK
         #endregion
 
         private System.Windows.Forms.Button btnXemThongTin;
-        private System.Windows.Forms.Button btnDatMuaVacXin;
         private System.Windows.Forms.Button btnDangKyTiemChung;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSignOut;
+        private System.Windows.Forms.Button btnXuLyThanhToan;
     }
 }

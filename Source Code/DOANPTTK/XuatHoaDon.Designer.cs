@@ -181,6 +181,7 @@ namespace DOANPTTK
             this.Controls.Add(this.btnXuathoadon);
             this.Controls.Add(this.label1);
             this.Name = "frmDSHoaDon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách hóa đơn thanh toán";
             this.Load += new System.EventHandler(this.frmDSHoaDon_Load);
             this.panel1.ResumeLayout(false);

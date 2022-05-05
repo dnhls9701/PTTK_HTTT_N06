@@ -14,23 +14,28 @@ namespace DOANPTTK
     public partial class frmDSHoaDon : Form
     {
         BUS_HoaDon BUS_hoaDon;
-        public frmDSHoaDon()
+        string tenTaiKhoan;
+        public frmDSHoaDon(string tenTK)
         {
             InitializeComponent();
             BUS_hoaDon = new BUS_HoaDon();
+            this.tenTaiKhoan = tenTK;
         }
 
         private void frmDSHoaDon_Load(object sender, EventArgs e)
         {
-            DataTable dt = BUS_hoaDon.LayThongTinHoaDon();
+            DTO_HoaDon hd = new DTO_HoaDon();
+            hd.NhanVienLapHoaDon = this.tenTaiKhoan;
+            DataTable dt = BUS_hoaDon.LayThongTinHoaDon(hd);
             dsHoaDon.DataSource = dt;
         }
 
         private void btnLaphoadon_Click(object sender, EventArgs e)
         {
-            frmLapHoaDon frmLapHoaDon = new frmLapHoaDon();
-            frmLapHoaDon.Show();
+            frmLapHoaDon frmLapHoaDon = new frmLapHoaDon(this.tenTaiKhoan);
             this.Hide();
+            frmLapHoaDon.ShowDialog();
+            this.Show();
         }
     }
 }

@@ -16,12 +16,13 @@ namespace DOANPTTK
             dc = new DataConnection();
 
         }
-        public DataTable LayThongTinHoaDon()
+        public DataTable LayThongTinHoaDon(DTO_HoaDon hoaDon)
         {
             try
             {
                 SqlConnection con = dc.getConnect();
-                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM HOADON", con);
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM HOADON WHERE NHANVIENLAPHOADON = @MaNhanVien", con);
+                da.SelectCommand.Parameters.Add("@MaNhanVien", SqlDbType.VarChar).Value = hoaDon.NhanVienLapHoaDon;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 return dt;

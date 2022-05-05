@@ -21,8 +21,9 @@ namespace DOANPTTK
             try
             {
                 SqlConnection con = dc.getConnect();
-                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM TAIKHOAN WHERE TENTAIKHOAN = @TenTaiKhoan", con);
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM TAIKHOAN WHERE TENTAIKHOAN = @TenTaiKhoan AND MATKHAU = @MatKhau", con);
                 da.SelectCommand.Parameters.Add("@TenTaiKhoan", SqlDbType.VarChar).Value = taiKhoan.TenTaiKhoan;
+                da.SelectCommand.Parameters.Add("@MatKhau", SqlDbType.VarChar).Value = taiKhoan.MatKhau;
                 //da.SelectCommand.Parameters.AddWithValue("@TenTaiKhoan", "%" + txt + "%");
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -33,6 +34,24 @@ namespace DOANPTTK
                 return null;
             }
             
+        }
+        public DataRow LayThongTinTaiKhoan(string tenTaiKhoan)
+        {
+            try
+            {
+                SqlConnection con = dc.getConnect();
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM TAIKHOAN WHERE TENTAIKHOAN = @TenTaiKhoan", con);
+                da.SelectCommand.Parameters.Add("@TenTaiKhoan", SqlDbType.VarChar).Value = tenTaiKhoan;
+                //da.SelectCommand.Parameters.AddWithValue("@TenTaiKhoan", "%" + txt + "%");
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt.Rows[0];
+            }
+            catch
+            {
+                return null;
+            }
+
         }
     }
 }

@@ -20,5 +20,10 @@ namespace DOANPTTK
             return dalTaiKhoan.DocThongTinTaiKhoan(taiKhoan);
         }
 
+        public DataRow LayThongTinTaiKhoan(string tenTaiKhoan)
+        {
+            return dalTaiKhoan.LayThongTinTaiKhoan(tenTaiKhoan);
+        }
+
     }
 }
