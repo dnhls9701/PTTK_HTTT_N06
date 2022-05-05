@@ -12,32 +12,38 @@ namespace DOANPTTK
 {
     public partial class frmOptionsCustom : Form
     {
-        frmDangNhap cur_frmDangNhap;
-        public frmOptionsCustom(frmDangNhap frmDangNhap)
+        string MaKhachHang;
+        public frmOptionsCustom(string makh)
         {
-            cur_frmDangNhap = frmDangNhap;
             InitializeComponent();
+            this.MaKhachHang = makh;
         }
 
         private void btnDangKyTiemChung_Click(object sender, EventArgs e)
         {
             frmDangKyTiemChung frmDangKyTiemChung = new frmDangKyTiemChung();
-            frmDangKyTiemChung.Show();
-            this.Hide();
+            frmDangKyTiemChung.ShowDialog();
+            //this.Hide();
         }
 
-        private void btnSignOut_Click(object sender, EventArgs e)
+        private void btnDatMuaVacXin_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất tài khoản?", "Xác nhận", MessageBoxButtons.YesNoCancel);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-                cur_frmDangNhap.Show();
-            }
-            else if (result == DialogResult.No)
-            {
-                //..
-            }
+            frmDatMuaVacXin frmDatMuaVacXin = new frmDatMuaVacXin(this.MaKhachHang);
+            frmDatMuaVacXin.ShowDialog();
+            //this.Hide();
+        }
+
+        private void btnTraCuu_Click(object sender, EventArgs e)
+        {
+            frmTraCuu frmTraCuu = new frmTraCuu(this.MaKhachHang);
+            frmTraCuu.ShowDialog();
+        }
+
+        private void btnDangXuat_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmDangNhap frmDangNhap = new frmDangNhap();
+            frmDangNhap.Show();
         }
     }
 }

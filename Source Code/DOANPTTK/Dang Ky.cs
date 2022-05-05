@@ -30,15 +30,12 @@ namespace DOANPTTK
                 sda.Fill(dataTable);
                 MessageBox.Show("Đăng ký thành công!");
 
-                /*if (dataTable.Rows.Count > 0)
+                if (dataTable.Rows.Count > 0)
                 {
-                    frmOptionsCustom frmOptions = new frmOptionsCustom();
+                    frmOptionsCustom frmOptions = new frmOptionsCustom(txtTenTaiKhoan.Text);
                     frmOptions.Show();
                     this.Hide();
-                }*/
-                frmDangNhap frmDangNhap = new frmDangNhap();
-                frmDangNhap.Show();
-                this.Hide();
+                }
             }
             catch {
                 con.Open();

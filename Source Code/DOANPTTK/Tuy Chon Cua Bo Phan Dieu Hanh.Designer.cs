@@ -30,40 +30,43 @@ namespace DOANPTTK
         private void InitializeComponent()
         {
             this.btnXemThongTin = new System.Windows.Forms.Button();
-            this.btnDatMuaVacXin = new System.Windows.Forms.Button();
+            this.btnPhanCongCongViec = new System.Windows.Forms.Button();
             this.btnDangKyTiemChung = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnSignOut = new System.Windows.Forms.Button();
+            this.btn_dangxuat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnXemThongTin
             // 
             this.btnXemThongTin.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnXemThongTin.Location = new System.Drawing.Point(221, 194);
+            this.btnXemThongTin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXemThongTin.Name = "btnXemThongTin";
-            this.btnXemThongTin.Size = new System.Drawing.Size(153, 51);
+            this.btnXemThongTin.Size = new System.Drawing.Size(358, 50);
             this.btnXemThongTin.TabIndex = 32;
             this.btnXemThongTin.Text = "Thông tin tài khoản";
             this.btnXemThongTin.UseVisualStyleBackColor = false;
             // 
-            // btnDatMuaVacXin
+            // btnPhanCongCongViec
             // 
-            this.btnDatMuaVacXin.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnDatMuaVacXin.Location = new System.Drawing.Point(426, 274);
-            this.btnDatMuaVacXin.Name = "btnDatMuaVacXin";
-            this.btnDatMuaVacXin.Size = new System.Drawing.Size(153, 51);
-            this.btnDatMuaVacXin.TabIndex = 31;
-            this.btnDatMuaVacXin.Text = "Phân công công việc";
-            this.btnDatMuaVacXin.UseVisualStyleBackColor = false;
+            this.btnPhanCongCongViec.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnPhanCongCongViec.Location = new System.Drawing.Point(427, 274);
+            this.btnPhanCongCongViec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPhanCongCongViec.Name = "btnPhanCongCongViec";
+            this.btnPhanCongCongViec.Size = new System.Drawing.Size(153, 50);
+            this.btnPhanCongCongViec.TabIndex = 31;
+            this.btnPhanCongCongViec.Text = "Phân công công việc";
+            this.btnPhanCongCongViec.UseVisualStyleBackColor = false;
+            this.btnPhanCongCongViec.Click += new System.EventHandler(this.btnPhanCongCongViec_Click);
             // 
             // btnDangKyTiemChung
             // 
             this.btnDangKyTiemChung.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnDangKyTiemChung.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnDangKyTiemChung.Location = new System.Drawing.Point(221, 274);
+            this.btnDangKyTiemChung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDangKyTiemChung.Name = "btnDangKyTiemChung";
-            this.btnDangKyTiemChung.Size = new System.Drawing.Size(153, 51);
+            this.btnDangKyTiemChung.Size = new System.Drawing.Size(153, 50);
             this.btnDangKyTiemChung.TabIndex = 30;
             this.btnDangKyTiemChung.Text = "Duyệt danh sách đặt mua vacxin";
             this.btnDangKyTiemChung.UseVisualStyleBackColor = false;
@@ -79,41 +82,30 @@ namespace DOANPTTK
             this.label1.TabIndex = 29;
             this.label1.Text = "Tùy Chọn Chức Năng";
             // 
-            // button1
+            // btn_dangxuat
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.button1.Location = new System.Drawing.Point(426, 194);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 51);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Xem lịch rảnh của nhân viên";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btnSignOut
-            // 
-            this.btnSignOut.BackColor = System.Drawing.SystemColors.GrayText;
-            this.btnSignOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSignOut.Location = new System.Drawing.Point(686, 20);
-            this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Size = new System.Drawing.Size(92, 36);
-            this.btnSignOut.TabIndex = 34;
-            this.btnSignOut.Text = "Đăng xuất";
-            this.btnSignOut.UseVisualStyleBackColor = false;
-            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            this.btn_dangxuat.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btn_dangxuat.Location = new System.Drawing.Point(316, 344);
+            this.btn_dangxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_dangxuat.Name = "btn_dangxuat";
+            this.btn_dangxuat.Size = new System.Drawing.Size(153, 50);
+            this.btn_dangxuat.TabIndex = 33;
+            this.btn_dangxuat.Text = "Đăng xuất";
+            this.btn_dangxuat.UseVisualStyleBackColor = false;
+            this.btn_dangxuat.Click += new System.EventHandler(this.btn_dangxuat_Click);
             // 
             // frmOptionsBPDH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnSignOut);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_dangxuat);
             this.Controls.Add(this.btnXemThongTin);
-            this.Controls.Add(this.btnDatMuaVacXin);
+            this.Controls.Add(this.btnPhanCongCongViec);
             this.Controls.Add(this.btnDangKyTiemChung);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmOptionsBPDH";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tùy chọn của bộ phận điều hành";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -123,10 +115,9 @@ namespace DOANPTTK
         #endregion
 
         private System.Windows.Forms.Button btnXemThongTin;
-        private System.Windows.Forms.Button btnDatMuaVacXin;
+        private System.Windows.Forms.Button btnPhanCongCongViec;
         private System.Windows.Forms.Button btnDangKyTiemChung;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnSignOut;
+        private System.Windows.Forms.Button btn_dangxuat;
     }
 }
