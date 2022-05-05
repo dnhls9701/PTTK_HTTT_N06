@@ -8,20 +8,22 @@ using System.Data.SqlClient;
 
 namespace DOANPTTK
 {
-    class DAL_Vacxin
+    class DAL_LichRanh
     {
         DataConnection dc;
-        public DAL_Vacxin()
+
+        public DAL_LichRanh()
         {
             dc = new DataConnection();
-
         }
-        public DataTable DocThongTinGoiTiem()
+
+        public DataTable DocMaNhanVien(int ViTri)
         {
             try
             {
                 SqlConnection con = dc.getConnect();
-                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM GOITIEM", con);
+                string strSQL = "SELECT DISTINCT MANHANVIEN FROM LICHRANH WHERE DATEDIFF(day,GETDATE(), NGAYRANH) >0 AND VITRI=" + ViTri.ToString();
+                SqlDataAdapter da = new SqlDataAdapter(strSQL, con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 return dt;
@@ -32,12 +34,13 @@ namespace DOANPTTK
             }
         }
 
-        public DataTable DocThongTinVacxin()
+        public DataTable DocNgayRanh(string MaNhanVien)
         {
             try
             {
                 SqlConnection con = dc.getConnect();
-                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM VACXIN", con);
+                string strSQL = "SELECT DISTINCT NGAYRANH FROM LICHRANH WHERE DATEDIFF(day,GETDATE(), NGAYRANH) >0 AND MANHANVIEN='" + MaNhanVien + "'";
+                SqlDataAdapter da = new SqlDataAdapter(strSQL, con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 return dt;
@@ -48,12 +51,13 @@ namespace DOANPTTK
             }
         }
 
-        public DataTable DocThongTinTiemLe()
+        public DataTable DocCaRanh(string MaNhanVien, string Ngay)
         {
             try
             {
                 SqlConnection con = dc.getConnect();
-                SqlDataAdapter da = new SqlDataAdapter("SELECT MAVACXIN,TENVACXIN,MOTA,DONGIA FROM VACXIN", con);
+                string strSQL = "SELECT CARANH FROM LICHRANH WHERE DATEDIFF(day, NGAYRANH, CONVERT(date,'" + Ngay + "',103)) = 0 AND MANHANVIEN='" + MaNhanVien + "'";
+                SqlDataAdapter da = new SqlDataAdapter(strSQL, con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 return dt;

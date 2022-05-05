@@ -15,13 +15,14 @@ namespace DOANPTTK
     {
         BUS_TaiKhoan BUS_taiKhoan;
         BUS_NhanVien BUS_nhanVien;
+        BUS_KhachHang BUS_KhachHang;
         public frmDangNhap()
         {
             InitializeComponent();
        
             BUS_taiKhoan = new BUS_TaiKhoan();
             BUS_nhanVien = new BUS_NhanVien();
- 
+            BUS_KhachHang = new BUS_KhachHang();
         }
   
         private void btnThoat_Click(object sender, EventArgs e)

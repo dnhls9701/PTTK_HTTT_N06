@@ -19,5 +19,15 @@ namespace DOANPTTK
         {
             return dalVacxin.DocThongTinVacxin();
         }
+
+        public DataTable DocThongTinGoiTiem()
+        {
+            return dalVacxin.DocThongTinGoiTiem();
+        }
+
+        public DataTable DocThongTinTiemLe()
+        {
+            return dalVacxin.DocThongTinTiemLe();
+        }
     }
 }

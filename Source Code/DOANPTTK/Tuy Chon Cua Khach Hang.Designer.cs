@@ -36,6 +36,7 @@ namespace DOANPTTK
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.btnXemThongTin = new System.Windows.Forms.Button();
             this.btnSignOut = new System.Windows.Forms.Button();
+            this.btnTraCuu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -70,11 +71,12 @@ namespace DOANPTTK
             this.btnDatMuaVacXin.TabIndex = 11;
             this.btnDatMuaVacXin.Text = "Đặt mua vacxin";
             this.btnDatMuaVacXin.UseVisualStyleBackColor = false;
+            this.btnDatMuaVacXin.Click += new System.EventHandler(this.btnDatMuaVacXin_Click);
             // 
             // btnSuaPhieu
             // 
             this.btnSuaPhieu.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnSuaPhieu.Location = new System.Drawing.Point(216, 327);
+            this.btnSuaPhieu.Location = new System.Drawing.Point(216, 322);
             this.btnSuaPhieu.Name = "btnSuaPhieu";
             this.btnSuaPhieu.Size = new System.Drawing.Size(153, 51);
             this.btnSuaPhieu.TabIndex = 12;
@@ -84,7 +86,7 @@ namespace DOANPTTK
             // btnThanhToan
             // 
             this.btnThanhToan.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnThanhToan.Location = new System.Drawing.Point(421, 327);
+            this.btnThanhToan.Location = new System.Drawing.Point(421, 322);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(153, 51);
             this.btnThanhToan.TabIndex = 13;
@@ -94,9 +96,9 @@ namespace DOANPTTK
             // btnXemThongTin
             // 
             this.btnXemThongTin.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnXemThongTin.Location = new System.Drawing.Point(216, 164);
+            this.btnXemThongTin.Location = new System.Drawing.Point(216, 168);
             this.btnXemThongTin.Name = "btnXemThongTin";
-            this.btnXemThongTin.Size = new System.Drawing.Size(358, 51);
+            this.btnXemThongTin.Size = new System.Drawing.Size(153, 51);
             this.btnXemThongTin.TabIndex = 14;
             this.btnXemThongTin.Text = "Thông tin tài khoản";
             this.btnXemThongTin.UseVisualStyleBackColor = false;
@@ -113,11 +115,24 @@ namespace DOANPTTK
             this.btnSignOut.UseVisualStyleBackColor = false;
             this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
+            // btnTraCuu
+            // 
+            this.btnTraCuu.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnTraCuu.Location = new System.Drawing.Point(421, 169);
+            this.btnTraCuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTraCuu.Name = "btnTraCuu";
+            this.btnTraCuu.Size = new System.Drawing.Size(153, 50);
+            this.btnTraCuu.TabIndex = 27;
+            this.btnTraCuu.Text = "Tra cứu";
+            this.btnTraCuu.UseVisualStyleBackColor = false;
+            this.btnTraCuu.Click += new System.EventHandler(this.btnTraCuu_Click);
+            // 
             // frmOptionsCustom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnTraCuu);
             this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.btnXemThongTin);
             this.Controls.Add(this.btnThanhToan);
@@ -142,5 +157,6 @@ namespace DOANPTTK
         private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.Button btnXemThongTin;
         private System.Windows.Forms.Button btnSignOut;
+        private System.Windows.Forms.Button btnTraCuu;
     }
 }

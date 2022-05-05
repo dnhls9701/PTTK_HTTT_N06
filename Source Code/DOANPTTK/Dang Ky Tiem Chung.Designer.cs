@@ -30,6 +30,7 @@ namespace DOANPTTK
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnChongoimuitiem = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cbLoai = new System.Windows.Forms.ComboBox();
@@ -51,7 +52,6 @@ namespace DOANPTTK
             this.colMaKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaTrungTam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNgayTiemDuKien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnChongoimuitiem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDSPhieuDangKy)).BeginInit();
             this.SuspendLayout();
@@ -79,6 +79,17 @@ namespace DOANPTTK
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(733, 397);
             this.panel1.TabIndex = 9;
+            // 
+            // btnChongoimuitiem
+            // 
+            this.btnChongoimuitiem.BackColor = System.Drawing.Color.Moccasin;
+            this.btnChongoimuitiem.Location = new System.Drawing.Point(388, 331);
+            this.btnChongoimuitiem.Name = "btnChongoimuitiem";
+            this.btnChongoimuitiem.Size = new System.Drawing.Size(175, 38);
+            this.btnChongoimuitiem.TabIndex = 18;
+            this.btnChongoimuitiem.Text = "Chọn gói tiêm/mũi tiêm";
+            this.btnChongoimuitiem.UseVisualStyleBackColor = false;
+            this.btnChongoimuitiem.Click += new System.EventHandler(this.btnChongoimuitiem_Click);
             // 
             // label8
             // 
@@ -287,22 +298,11 @@ namespace DOANPTTK
             this.colNgayTiemDuKien.Name = "colNgayTiemDuKien";
             this.colNgayTiemDuKien.Width = 160;
             // 
-            // btnChongoimuitiem
-            // 
-            this.btnChongoimuitiem.BackColor = System.Drawing.Color.Moccasin;
-            this.btnChongoimuitiem.Location = new System.Drawing.Point(388, 331);
-            this.btnChongoimuitiem.Name = "btnChongoimuitiem";
-            this.btnChongoimuitiem.Size = new System.Drawing.Size(175, 38);
-            this.btnChongoimuitiem.TabIndex = 18;
-            this.btnChongoimuitiem.Text = "Chọn gói tiêm/mũi tiêm";
-            this.btnChongoimuitiem.UseVisualStyleBackColor = false;
-            this.btnChongoimuitiem.Click += new System.EventHandler(this.btnChongoimuitiem_Click);
-            // 
             // frmDangKyTiemChung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 767);
+            this.ClientSize = new System.Drawing.Size(784, 767);
             this.Controls.Add(this.dgDSPhieuDangKy);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);

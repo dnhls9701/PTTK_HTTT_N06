@@ -30,11 +30,11 @@ namespace DOANPTTK
         private void InitializeComponent()
         {
             this.btnXemThongTin = new System.Windows.Forms.Button();
-            this.btnDatMuaVacXin = new System.Windows.Forms.Button();
             this.btnDangKyTiemChung = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnSignOut = new System.Windows.Forms.Button();
+            this.btnPhanCongCongViec = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnXemThongTin
@@ -46,16 +46,6 @@ namespace DOANPTTK
             this.btnXemThongTin.TabIndex = 32;
             this.btnXemThongTin.Text = "Thông tin tài khoản";
             this.btnXemThongTin.UseVisualStyleBackColor = false;
-            // 
-            // btnDatMuaVacXin
-            // 
-            this.btnDatMuaVacXin.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnDatMuaVacXin.Location = new System.Drawing.Point(426, 274);
-            this.btnDatMuaVacXin.Name = "btnDatMuaVacXin";
-            this.btnDatMuaVacXin.Size = new System.Drawing.Size(153, 51);
-            this.btnDatMuaVacXin.TabIndex = 31;
-            this.btnDatMuaVacXin.Text = "Phân công công việc";
-            this.btnDatMuaVacXin.UseVisualStyleBackColor = false;
             // 
             // btnDangKyTiemChung
             // 
@@ -101,15 +91,26 @@ namespace DOANPTTK
             this.btnSignOut.UseVisualStyleBackColor = false;
             this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
+            // btnPhanCongCongViec
+            // 
+            this.btnPhanCongCongViec.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnPhanCongCongViec.Location = new System.Drawing.Point(426, 274);
+            this.btnPhanCongCongViec.Name = "btnPhanCongCongViec";
+            this.btnPhanCongCongViec.Size = new System.Drawing.Size(153, 51);
+            this.btnPhanCongCongViec.TabIndex = 35;
+            this.btnPhanCongCongViec.Text = "Phân công công việc";
+            this.btnPhanCongCongViec.UseVisualStyleBackColor = false;
+            this.btnPhanCongCongViec.Click += new System.EventHandler(this.btnPhanCongCongViec_Click);
+            // 
             // frmOptionsBPDH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPhanCongCongViec);
             this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnXemThongTin);
-            this.Controls.Add(this.btnDatMuaVacXin);
             this.Controls.Add(this.btnDangKyTiemChung);
             this.Controls.Add(this.label1);
             this.Name = "frmOptionsBPDH";
@@ -123,10 +124,10 @@ namespace DOANPTTK
         #endregion
 
         private System.Windows.Forms.Button btnXemThongTin;
-        private System.Windows.Forms.Button btnDatMuaVacXin;
         private System.Windows.Forms.Button btnDangKyTiemChung;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnSignOut;
+        private System.Windows.Forms.Button btnPhanCongCongViec;
     }
 }

@@ -44,5 +44,17 @@ namespace DOANPTTK
                 //..
             }
         }
+
+        private void btnDatMuaVacXin_Click(object sender, EventArgs e)
+        {
+            frmDatMuaVacXin frmDatMuaVacXin = new frmDatMuaVacXin(this.tenTaiKhoan);
+            frmDatMuaVacXin.ShowDialog();
+        }
+
+        private void btnTraCuu_Click(object sender, EventArgs e)
+        {
+            frmTraCuu frmTraCuu = new frmTraCuu(this.tenTaiKhoan);
+            frmTraCuu.ShowDialog();
+        }
     }
 }
